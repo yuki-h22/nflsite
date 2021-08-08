@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nflsite</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>保育園向け就労証明書発行サービスサイト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="保育園向けの就労証明書の発行をいたします。実雇用あり。リスク軽減。業界最安。">
+    <meta name="keywords" content="就労証明書,アリバイ会社,n-frontline,N-FrontLine,n.frontrine,N.FrontLine,保育園,発行,就労証明書発行,代行,在職証明書,勤務証明書">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload', charset: 'utf-8'%>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+  <!--小さな端末用（800px以下端末）のロゴとメニュー-->
+    <div id="sh">
+    <h1 class="logo"><a href="index.html"><img src="assets/logo.png" alt="Site Logo"></a></h1>
+    <nav id="menubar-s">
+    <ul>
+    <li><a href="index.html"><span>ホーム</span>Home</a></li>
+    <li><a href="guidance.html"><span>サービスについて</span>Guidance</a></li>
+    <li><a href="application.html"><span>お申し込み</span>application</a></li>
+    <%# <li><a href="works.html"><span>作品</span>Works</a></li> %>
+    <li><a href="contact.html"><span>お問い合わせ</span>Contact</a></li>
+    </ul>
+    </nav>
+    </div>
+
+    <div id="container">
+
+    <div id="main">
+
     <%= yield %>
+
+    <div id="sub">
+
+    <!--PC用（801px以上端末）ロゴ-->
+    <h1 class="logo"><a href="index.html"><img src="assets/logo.png" alt="Sample Site"></a></h1>
+
+    <!--PC用（801px以上端末）メニュー-->
+    <nav id="menubar">
+    <ul>
+    <li><a href="index.html"><span>ホーム</span>Home</a></li>
+    <li><a href="guidance.html"><span>サービスについて</span>Guidance</a></li>
+    <li><a href="application.html"><span>お申し込み</span>application</a></li>
+    <%# <li><a href="works.html"><span>作品</span>Works</a></li> %>
+    <li><a href="contact.html"><span>お問い合わせ</span>Contact</a></li>
+    </ul>
+    </nav>
+
+    </div>
+    <!--/sub-->
+
+    <p id="pagetop"><a href="#">↑</a></p>
+
+    <footer>
+    <small>Copyright&copy; <a href="index.html">N.FrontLine</a> All Rights Reserved.</small>
+    <span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+
+    </div>
+    <!--/container-->
+
+    <!--更新情報の開閉処理条件設定　800px以下-->
+    <script type="text/javascript">
+    if (OCwindowWidth() <= 800) {
+      open_close("newinfo_hdr", "newinfo");
+    }
+    </script>
+
+    <!--メニューの３本バー-->
+    <div id="menubar_hdr" class="close"><span></span><span></span><span></span></div>
+    <!--メニューの開閉処理条件設定　800px以下-->
+    <script type="text/javascript">
+    if (OCwindowWidth() <= 800) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+    </script>
+
   </body>
 </html>
