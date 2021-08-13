@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root 'blogs#index'
   get 'index' => 'blogs#index'
   get 'application' => 'blogs#application'
-  get 'works' => 'blogs#works'
+  get 'about' => 'blogs#about'
   get 'guidance' => 'blogs#guidance'
-  get 'contact' => 'blogs#contact'
+  get 'personal' => 'blogs#personal'
+  get 'terms' => 'blogs#terms'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
