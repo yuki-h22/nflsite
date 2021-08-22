@@ -26,6 +26,11 @@
 /*全体の設定
 ---------------------------------------------------------------------------*/
 
+.font1 {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
 body,
 html {
   width: 100%;
